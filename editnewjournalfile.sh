@@ -13,6 +13,6 @@ else
 	echo "File already exists: $journalfile";
 fi;
 
-vim '+normal Go' $journalfile;
+vim '+normal G2o' +startinsert $journalfile;
 git commit -m "Changes in journal file $journalfile" $journalfile;
 git push origin master;
